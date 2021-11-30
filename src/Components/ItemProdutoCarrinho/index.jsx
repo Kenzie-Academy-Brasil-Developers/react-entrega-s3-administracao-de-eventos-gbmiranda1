@@ -9,7 +9,16 @@ function ItemProdutoCarrinho({product, text, setProdutos, produtos}) {
     function handleAdd(produto) {
         setProdutos(produtos.filter((item) => item.id !== produto.id))
         localStorage.setItem(`@Event-Beers:${text}`, JSON.stringify(JSON.parse(localStorage.getItem(`@Event-Beers:${text}`)).filter((item)=>item.id !== produto.id)));
-        toast.success(`${produto.name} removido com sucesso`)
+        toast.success(`${produto.name} removido com sucesso`, {
+            position: "top-right",
+            autoClose: 1200,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        })
     }
     
     return(

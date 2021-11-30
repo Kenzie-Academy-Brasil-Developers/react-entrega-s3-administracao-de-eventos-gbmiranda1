@@ -1,4 +1,4 @@
-import {NativeSelect, InputLabel} from "@mui/material"
+import {NativeSelect, InputLabel, Slider} from "@mui/material"
 import Buttons from "../Button"
 import * as yup from 'yup';
 import { useForm } from "react-hook-form";
@@ -24,13 +24,40 @@ function PopupAddEvent({setPopup, produtoClicado}) {
         setPopup(false)
         if(localStorage.getItem(`@Event-Beers:${data.category}`) === null){
             localStorage.setItem(`@Event-Beers:${data.category}`, JSON.stringify([produtoClicado]));
-            toast.success(`${produtoClicado.name} foi adicionado`)
+            toast.success(`${produtoClicado.name} foi adicionado`, {
+                position: "top-right",
+                autoClose: 1200,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                })
         }else{
             if(JSON.parse(localStorage.getItem(`@Event-Beers:${data.category}`)).filter((item) => item.id === produtoClicado.id).length === 0){
                 localStorage.setItem(`@Event-Beers:${data.category}`, JSON.stringify([...JSON.parse(localStorage.getItem(`@Event-Beers:${data.category}`)), produtoClicado]));
-                toast.success(`${produtoClicado.name} foi adicionado`)
+                toast.success(`${produtoClicado.name} foi adicionado`, {
+                    position: "top-right",
+                    autoClose: 1200,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    })
             }else{
-                toast.error("Produto já foi adicionado anteriormente")
+                toast.error("Produto já foi adicionado anteriormente", {
+                    position: "top-right",
+                    autoClose: 1200,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    })
             }
         }
     }
