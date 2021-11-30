@@ -16,7 +16,8 @@ export const DivButtons = styled.div`
     width: 100%;
     padding: 30px;
     box-sizing: border-box;
-
+    max-width: 700px;
+    margin: auto;
     button ~ button{
         margin-left: 10px;
     }

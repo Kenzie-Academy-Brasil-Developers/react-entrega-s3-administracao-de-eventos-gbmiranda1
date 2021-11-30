@@ -7,6 +7,8 @@ export const Div = styled.div`
     align-items: center;
     flex-direction: column;
     margin: 30px 0px;
+    padding: 0px 30px;
+    box-sizing: border-box;
     @media (min-width: 800px){
         justify-content: center;
         margin: 0px;
@@ -20,6 +22,7 @@ export const Form = styled.form`
     flex-direction: column;
     border: 2px solid #F5F5F5;
     padding: 26px 19px 26px 19px;
+    width: 100%;
     margin-top: 30px;
     h3{
         margin-bottom: 20px;

@@ -23,6 +23,7 @@ export const DivCard = styled.div`
     justify-content: center;
     align-items: center;
     margin: auto;
+    text-align: center;
     h3{
         font-size: 14px;
         text-align: center;
@@ -30,10 +31,18 @@ export const DivCard = styled.div`
         border-top: 1px solid grey;
         width: 100%;
         padding: 10px 0 0 0;
+        font-weight: bold;
+        font-size: 20px;
     }
     span{
         color: black;
+        font-size: 15px;
     }
+
+    span ~ span{
+        margin-top: 10px;
+    }
+
     img{
         margin-bottom: 10px;
     }

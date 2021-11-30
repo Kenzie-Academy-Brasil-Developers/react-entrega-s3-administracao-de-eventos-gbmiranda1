@@ -1,5 +1,5 @@
 import Burger from "../Burguer";
-import {Div, SpanBeers, Container, Ul} from "./style"
+import {Div, SpanBeers, Container} from "./style"
 
 function Header({open}){
 
